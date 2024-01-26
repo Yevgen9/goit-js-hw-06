@@ -28,3 +28,4 @@ images.map(({ url, alt }) => {
 
   galleryRef.prepend(createLi);
 });
+
