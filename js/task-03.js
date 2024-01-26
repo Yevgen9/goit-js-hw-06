@@ -17,10 +17,14 @@ const galleryRef = document.querySelector(".gallery");
 
 images.map(({ url, alt }) => {
   const createLi = document.createElement("li");
-  createLi.style.display = flex;
+  createLi.style.listStyle = 'none';
+  createLi.style.marginBottom = '20px'
+  
   const createImage = document.createElement("img");
+
   createImage.setAttribute("src", url);
   createImage.setAttribute("alt", alt);
   createLi.prepend(createImage);
+
   galleryRef.prepend(createLi);
 });
