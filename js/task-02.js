@@ -15,8 +15,19 @@ const elements = ingredients.map((ingredient) => {
   createLi.classList.add("item");
   return createLi;
 });
-
 ingredientsRef.prepend(...elements);
+
+
+const ingredientsRef = document.querySelector("#ingredients");
+const createItem = ingredients.map((ingredient) => {
+  const liRef = document.createElement("li");
+  liRef.classList.add("item");
+  ingredientsRef.appendChild(liRef);
+  liRef.textContent = ingredient;
+    liRef.style.listStyle = "none";
+    return liRef;
+});
+
 
 // const condimentsRef = document.createElement("li");
 // condimentsRef.classList.add("item");
